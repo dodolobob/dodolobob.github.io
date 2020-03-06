@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<head><meta charset="UTF-8"></head>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p>bruh</p>
-</body>
+  <body>
+    <form action="/action_page.php">
+      <label for="To_Doodle">String To Doodle:</label><br>
+      <TEXTAREA id="To_Doodle" Name="content" ROWS="4" COLS="50"></TEXTAREA><br>
+      <label for="Doodled">Doodled:</label><br>
+      <TEXTAREA id="Doodled" Name="Doodled" ROWS="4" COLS="50"></TEXTAREA><br>
+      <input id="Submit" type="submit" value="Submit" onclick="doFunction();"/>
+    </form>
+    <script type="text/javascript" src="Definitions.js"></script>
+    <script type="text/javascript" src="translate.js"></script>
+  </body>
 </html>
