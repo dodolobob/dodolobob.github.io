@@ -8,7 +8,6 @@ String.prototype.replaceAll = function(str1, str2, ignore)
 function doFunction(){
   var old_string = document.getElementById('To_Doodle').value;
   var symbols = "_.,<>:;{}[]\\/|@#$%^&*~`()+-='";
-  var quotes = [" '","' "];
   var new_list = [];
   var new_string = '';
 
@@ -26,11 +25,11 @@ function doFunction(){
   var word_list = old_string.split(" ");
 
   for(var i = word_list.length-1; i--;){
-  	if (word_list[i] === '') word_list.splice(i, 1);
+    if (word_list[i] === '') word_list.splice(i, 1);
   };
 
   for(var i = word_list.length-1; i--;){
-  	if (word_list[i].length === 0) word_list.splice(i, 1);
+    if (word_list[i].length === 0) word_list.splice(i, 1);
   };
 
   for (index = 0; index < word_list.length; index++) {
@@ -56,7 +55,9 @@ function doFunction(){
 };
 
 var el = document.getElementById("Submit");
-if (el.addEventListener)
+if (el.addEventListener) {
     el.addEventListener("click", doFunction, false);
-else if (el.attachEvent)
+  }
+else if (el.attachEvent) {
     el.attachEvent('onclick', doFunction);
+  };
